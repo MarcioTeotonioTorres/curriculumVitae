@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="visitantesModulo">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ok</title>
+<link rel="icon" href="data:,">
+<link href="/webjars/bootstrap/5.2.0/css/bootstrap.min.css"
+	rel="stylesheet">
+<link rel="stylesheet" href="css/fundo.css">
+<script src="webjars/angularjs/1.8.2/angular.js"></script>
+<script src="controllerJs/visitanteController.js"></script>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		var tooltipTriggerList = [].slice.call(document
+				.querySelectorAll('[data-bs-toggle="tooltip"]'));
+		var tooltipList = tooltipTriggerList.map(function(element) {
+			return new bootstrap.Tooltip(element);
+		});
+	});
+</script>
+
+
+</head>
+<body ng-controller="visitantesController">
+	<div class="row">
+		<div class="container-fluid">
+			<nav class="navbar bg-light justify-content-center">
+				<h4 class="navbar-brand fw-bold">Curriculum Vitae</h4>
+			</nav>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-2">
+			<div class="container text-center">
+				<img
+					src="imagens/havai-horizonte-natureza-por-do-sol-imagem-de-fundo.jpg"
+					alt="FotoMárcio" class="rounded-circle img-fluid" width="200"
+					height="200" />
+
+
+			</div>
+			<img src="imagens/SEPARADOR-DE-TEXTO-1.png" class="img-fluid"
+				data-bs-toggle="tooltip" data-bs-placement="top"
+				title="Foto formal Marcio Torres" />
+			<p></p>
+			<div class="container text-center">
+				<div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+					<div class="card-header">Mídias sociais</div>
+					<div class="card-body">
+						<p class="card-text">Registre-se como visitante, e receba no
+							seu e-mail, um currículo atualizado.</p>
+						<a class="card-link"
+							href="https://www.linkedin.com/in/marcio-torres-999045123"
+							data-bs-toggle="tooltip" data-bs-placement="top"
+							title="Acesse meu Linkedin!"><img
+							src="imagens/linkedin-download-png-5a3c183bbaceb1.8925079215138878037652.jpg"
+							width="18" height="18" title="Linkedin"/></a> <a class="card-link"
+							data-bs-toggle="tooltip" data-bs-placement="top"
+							title="Acesse meu GitHub!"
+							href="https://github.com/MarcioTeotonioTorres"> <img
+							src="imagens/kisspng-computer-icons-github-github-logo-save-icon-format-5ab0fad1044018.5037947915215479850174.jpg"
+							width="18" height="18" title="GitHub"/>
+						</a>
+					</div>
+					<div class="card-body">
+						<button type="button" class="btn btn-secondary"
+							data-bs-toggle="modal"  data-bs-target="#myModal1">Novo
+							visitante...</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="cssTextoPrincipal" class="col">
+			<h1>Márcio Teotônio Torres</h1>
+			<p>Olá seja bemvindo!</p>
+			possamos nos ver sempre em ambientes de produção ou aprendizado
+			<p></p>
+			<p class="muted">
+				Placeholder text to demonstrate some <a href="#"
+					ng-model="registrar" data-bs-toggle="tooltip"
+					data-bs-placement="top" data-bs-title="Default tooltip">inline
+					links</a> with tooltips. This is now just filler, no killer. Content
+				placed here just to mimic the {{registrar}} presence of <a href="#"
+					data-bs-toggle="tooltip" data-bs-title="Another tooltip">real
+					text</a>. And all that just to give you an idea of how tooltips would
+				look when used in real-world situations. So hopefully you've now
+				seen how <a href="#" data-bs-toggle="tooltip"
+					data-bs-title="Another one here too">these tooltips on links</a>
+				can work in practice, once you use them on <a href="#"
+					data-bs-toggle="tooltip" data-bs-title="The last tip!">your own</a>
+				site or project.
+			</p>
+			<br>
+<!-- 			<div class="container"> -->
+<!-- 				<table class="table table-striped table-hover"> -->
+<!-- 					<tr> -->
+<!-- 						<th scope="col">Código</th> -->
+<!-- 						<th scope="col">Nome</th> -->
+<!-- 						<th scope="col">Email</th> -->
+<!-- 					</tr> -->
+<!-- 					<tr ng-repeat="visitantesTabela in visitantes | filter:pesquisa"> -->
+<!-- 						<td ng-click="selecionaVisitante(vistantesTabela)"> -->
+<!-- 						<td>{{visitantesTabela.codigo}}</td> -->
+<!-- 						<td>{{visitantesTabela.nome}}</td> -->
+<!-- 						<td>{{visitantesTabela.email}}</td> -->
+<!-- 					</tr> -->
+<!-- 				</table> -->
+<!-- 			</div> -->
+		</div>
+	</div>
+	<div class="row">
+		<div ng-include="'templates/carroussel.html'"></div>
+	</div>
+	<div class="row">
+		<div ng-include="'templates/formModal.html'"></div>
+	</div>
+	<script type="text/javascript"
+		src="/webjars/bootstrap/5.2.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

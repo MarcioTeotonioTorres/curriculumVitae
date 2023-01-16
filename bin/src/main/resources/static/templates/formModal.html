@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="modal" tabindex="-1" id="myModal1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Seu contato:</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form method="post">
+<!-- 						<label class="col-sm-1 col-form-label" for="codigo" -->
+<!-- 					style="text-align: right;">Código:</label> -->
+<!-- 				<div class="col-md-4"> -->
+<!-- 					<input type="text" ng-model="visitante.codigo"  -->
+<!-- 						class="form-control" id="codigo" placeholder="Código" -->
+<!-- 						autocomplete="false"></input> -->
+<!-- 				</div> -->
+						<div class="col-md-4">
+							<label for="nome" class="form-label">Nome:</label> <input
+								type="text" class="form-control" id="nome"
+								ng-model="visitante.nome" required>
+						</div>
+						<div class="col-md-8">
+							<label for="email" class="form-label">E-mail:</label> <input
+								type="email" class="form-control" id="email"
+								ng-model="visitante.email" required>
+						</div>
+						<br>
+						<div class="col-md-4">
+							
+								<button class="btn btn-primary"
+									ng-click="salvar(visitante.nome,visitante.email)"
+									data-bs-dismiss="modal">Salvar</button>
+							
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-br" ng-app="professoresModulo">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="Marcio Torres, and Bootstrap contributors">
+<link rel="icon" href="imagens/Computer_icon-icons.com_55237.png">
+
+<title>Cadastro de Professores</title>
+
+<link rel="canonical" href="carousel.css/">
+<script src="js/angular.js"></script>
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<script src="controller/professores.js"></script>
+
+<!-- Custom styles for this template -->
+<link href="css/carousel.css" rel="stylesheet">
+<link href="css/estilo.css" rel="stylesheet">
+</head>
+<body ng-controller="professoresController">
+	<div ng-include src="'menu.html'"></div>
+	<div align="center">
+		<h1 id="efeitoCss3">Lista e Cadastro de Professores</h1>
+	</div>
+	<div class="container">
+		<form>
+			<div class="form-group row">
+				<label class="col-sm-1 col-form-label" for="codigo"
+					style="text-align: right;">Código:</label>
+				<div class="col-sm-11">
+					<input type="text" ng-model="professor.codigo" readonly="readonly"
+						class="form-control" id="codigo" placeholder="Código"
+						autocomplete="false"></input>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-1 col-form-label" for="nome"
+					style="text-align: right;">Nome:</label>
+				<div class="col-sm-11">
+					<input type="text" ng-model="professor.nome" required
+						class="form-control" id="nome" placeholder="Nome"></input>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-1" for="email" style="text-align: right;">Email:</label>
+				<div class="col-sm-11">
+					<input type="email" ng-model="professor.email" required
+						class="form-control" id="email" placeholder="Email"></input> <small
+						id="emailAjuda" class="form-text text-muted">Não
+						compartilhe seu email com outras pessoas.</small>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-1" for="telefone" style="text-align: right;">Telefone:</label>
+				<div class="col-sm-11">
+					<input type="text" ng-model="professor.telefone" required
+						class="form-control" id="telefone" placeholder="(99)99999-9999"></input>
+				</div>
+			</div>
+			<br>
+			<div class="form-group">
+				<button type="submit" class="btn btn-outline-primary btn-lg"
+					ng-click="limparCampos()">Novo</button>
+				<button type="submit" class="btn btn-primary btn-lg"
+					ng-click="salvar(professor.codigo,professor.nome,professor.email,professor.telefone)">Salvar</button>
+				<button type="submit" class="btn btn-danger btn-lg"
+					ng-click="excluir()">Excluir</button>
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" ng-model="pesquisa"
+					id="pesquisa" placeholder="Digite um filtro de pesquisa"></input>
+			</div>
+		</form>
+	</div>
+	<div class="container">
+		<table class="table table-striped table-hover">
+			<tr>
+				<th scope="col">Código</th>
+				<th scope="col">Nome</th>
+				<th scope="col">Email</th>
+				<th scope="col">Telefone</th>
+			</tr>
+			<tr ng-repeat="professoresTabela in professores | filter:pesquisa"
+				ng-click="selecionaProfessor(professoresTabela)">
+				<th>{{professoresTabela.codigo}}</th>
+				<td>{{professoresTabela.nome}}</td>
+				<td>{{professoresTabela.email}}</td>
+				<td>{{professoresTabela.telefone}}</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	<!-- FOOTER -->
+	<footer class="container">
+		<p class="float-right">
+			<a href="#">Back to top</a>
+		</p>
+		<p>
+			&copy; 2017-2020 Company, Inc. &middot; <a href="#">Privacy</a>
+			&middot; <a href="#">Terms</a>
+		</p>
+	</footer>
+
+	<script src="js/jquery-3.5.1.slim.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

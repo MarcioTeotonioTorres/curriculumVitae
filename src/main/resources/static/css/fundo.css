@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+body {
+	background-image: url("/imagens/planoDeFundoCinza.png");
+	background-size: 100%;			
+	background-color: transparent;
+	background-repeat: no-repeat
+}
+
+#cssTextoPrincipal{
+	font-family: fantasy;
+	color: silver;
+	font-size: 24px;
+}
