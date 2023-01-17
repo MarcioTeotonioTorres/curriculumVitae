@@ -37,10 +37,10 @@ visitantesModulo.controller('visitantesController', function($scope, $http) {
 				// called asynchronously if an error occurs
 				// or server returns response with an error status.
 				if(response.status == 500){
-					window.alert("Esse registro já existe, tente novamente");
+					window.alert("Esse registro já existe!");
 				}
 				
-				window.alert(response + "Registro errou!");
+				window.alert(response + "Tente novamente!");
 				
 				$scope.limparCampos();
 			});
