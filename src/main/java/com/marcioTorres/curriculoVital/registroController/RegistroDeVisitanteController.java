@@ -27,7 +27,7 @@ public class RegistroDeVisitanteController {
 			return new ResponseEntity<>(HttpStatus.OK);
 		} else {
 			
-			return new ResponseEntity<>("Este registro já existe!",HttpStatus.ALREADY_REPORTED);
+			return new ResponseEntity<>("Este registro já existe!",HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
 

@@ -3,7 +3,8 @@ visitantesModulo.controller('visitantesController', function($scope, $http) {
 
 	$scope.registrar = "Hello World";
 	
-
+	$scope.desativarBotao = false;
+	
 	urlSalvarVisitante = 'http://localhost:8080/salvar';
 
 	$scope.visitante = { nome: null, email: null };
@@ -28,30 +29,23 @@ visitantesModulo.controller('visitantesController', function($scope, $http) {
 				url: urlSalvarVisitante,
 				data: $scope.visitante
 			}).then(function successCallback(response) {
-				//				$scope.visitantes.push($scope.visitante);
-				console.log(response);
-				window.alert(response.status + "Registro salvo!");
+//				$scope.visitantes.push($scope.visitante);
+				console.log(response.status);
+							
+				window.alert("Contato salvo!");
 				$scope.limparCampos();
 				
 			}, function errorCallback(response) {
-				// called asynchronously if an error occurs
-				// or server returns response with an error status.
 				if(response.status == 500){
-					window.alert("Esse registro já existe!");
-				}
-				
+					window.alert("Esse contato já existe!");
+				}				
 				window.alert(response + "Tente novamente!");
-				
 				$scope.limparCampos();
 			});
 
-
-
-
 		} else {
 			
-			window.alert("Campos em vermelho são obrigatórios");
-		
+			window.alert("Campos em vermelho são obrigatórios");		
 			$scope.limparCampos();
 
 		}

@@ -35,10 +35,10 @@
 						</div>
 						<br>
 						<div class="col-md-4">
-							<button type="button" class="btn btn-secondary"
+							<button type="reset" class="btn btn-secondary"
 								data-bs-dismiss="modal" ng-click="limparCampos()">Close</button>
 							<button type="submit" class="btn btn-primary"
-								ng-click="salvar(visitante.nome,visitante.email)">Salvar</button>
+								ng-disabled="desativarBotao" ng-click="salvar(visitante.nome,visitante.email)">Salvar</button>
 						</div>
 					</div>
 
