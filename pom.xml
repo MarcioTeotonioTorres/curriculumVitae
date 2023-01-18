@@ -8,10 +8,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.marcioTorres</groupId>
-	<artifactId>curriculoVital</artifactId>
+	<artifactId>curriculumVitae</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>curriculoVital</name>
+	<name>curriculumVitae</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>18</java.version>

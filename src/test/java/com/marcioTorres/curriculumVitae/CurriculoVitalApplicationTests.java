@@ -1,10 +1,10 @@
-package com.marcioTorres.curriculoVital;
+package com.marcioTorres.curriculumVitae;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CurriculoVitalApplicationTests {
+class CurriculumVitaeApplicationTests {
 
 	@Test
 	void contextLoads() {
