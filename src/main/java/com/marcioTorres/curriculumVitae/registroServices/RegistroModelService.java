@@ -1,11 +1,11 @@
-package com.marcioTorres.curriculoVital.registroServices;
+package com.marcioTorres.curriculumVitae.registroServices;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.marcioTorres.curriculoVital.registroDao.RegistroDao;
-import com.marcioTorres.curriculoVital.registroModel.RegistroModel;
+import com.marcioTorres.curriculumVitae.registroDao.RegistroDao;
+import com.marcioTorres.curriculumVitae.registroModel.RegistroModel;
 
 @Service
 @Transactional(readOnly = false)

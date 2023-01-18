@@ -1,4 +1,4 @@
-package com.marcioTorres.curriculoVital.registroController;
+package com.marcioTorres.curriculumVitae.registroController;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

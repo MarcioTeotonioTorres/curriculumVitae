@@ -1,4 +1,4 @@
-package com.marcioTorres.curriculoVital.registroDao;
+package com.marcioTorres.curriculumVitae.registroDao;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;

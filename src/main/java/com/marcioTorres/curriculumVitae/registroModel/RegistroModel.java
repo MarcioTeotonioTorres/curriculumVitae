@@ -1,4 +1,4 @@
-package com.marcioTorres.curriculoVital.registroModel;
+package com.marcioTorres.curriculumVitae.registroModel;
 
 
 import javax.persistence.Column;

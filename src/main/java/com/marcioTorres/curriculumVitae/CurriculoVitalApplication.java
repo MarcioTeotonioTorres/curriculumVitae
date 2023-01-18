@@ -1,4 +1,4 @@
-package com.marcioTorres.curriculoVital;
+package com.marcioTorres.curriculumVitae;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.marcioTorres.curriculoVital;
+package com.marcioTorres.curriculumVitae;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
