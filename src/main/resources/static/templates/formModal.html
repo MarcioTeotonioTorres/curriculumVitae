@@ -15,33 +15,64 @@
 							aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
+						<div class="row align-items-center">
+							<div class="col">
+								<label for="nome" class="form-label">Nome:</label>
+							</div>
+							<div class="col-md-8">
+								<input type="text" class="form-control" id="nome"
+									ng-model="visitante.nome" required>
+								<div class="invalid-feedback">Como gosta de ser chamado?</div>
+								<div class="valid-feedback">Verifique seu nome e clique em
+									salvar.</div>
+							</div>
+						</div>
+						<div class="row align-items-center">
+							<div class="col">
+								<label for="email" class="form-label">E-mail:</label>
+							</div>
+							<div class="col-md-8">
+								<input type="email" class="form-control" id="email"
+									ng-model="visitante.email" required>
+								<div class="invalid-feedback">Digite o email para contato.</div>
+								<div class="valid-feedback">Verifique seu email e click em
+									salvar.</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="captcha">
+								<label class="form-label" for="captcha-input">Captcha...</label>
+								<div class="preview"></div>
+								<br>
+								<div class="captcha-form">
+									<div class="row align-items-center">
+										<div class="col-md-6">
+											<input type="text" class="form-control" id="captcha-form"
+											placeholder="Digite o captcha"	required>
+										</div>
+										<div class="col-md-2">
+											<button class="captcha-refresh btn btn-primary">
+												<i class="fa fa-refresh"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br>	
+						<div class="row align-items-center">
+							<div class="col-md-2">
+								<button type="reset" class="btn btn-secondary"
+									data-bs-dismiss="modal" ng-click="limparCampos()">Close</button>
+							</div>
+							<div class="col-md-2">
+								<button type="submit" class="btn btn-primary"
+									ng-disabled="desativarBotao"
+									ng-click="salvar(visitante.nome,visitante.email)" data-bs-dismiss="modal">Salvar</button>
+							</div>
+						</div>
 
-						<div class="col-md-6">
-							<label for="nome" class="form-label">Nome:</label> <input
-								type="text" class="form-control" id="nome"
-								ng-model="visitante.nome" required>
-							<div class="invalid-feedback">Como gosta de ser chamado?</div>
-							<div class="valid-feedback">Verifique seu nome e clique em
-								salvar.</div>
-
-						</div>
-						<div class="col-md-6">
-							<label for="email" class="form-label">E-mail:</label> <input
-								type="email" class="form-control" id="email"
-								ng-model="visitante.email" required>
-							<div class="invalid-feedback">Digite o email para contato.</div>
-							<div class="valid-feedback">Verifique seu email e click em
-								salvar.</div>
-						</div>
-						<br>
-						<div class="col-md-4">
-							<button type="reset" class="btn btn-secondary"
-								data-bs-dismiss="modal" ng-click="limparCampos()">Close</button>
-							<button type="submit" class="btn btn-primary"
-								ng-disabled="desativarBotao" ng-click="salvar(visitante.nome,visitante.email)">Salvar</button>
-						</div>
 					</div>
-
 				</div>
 			</div>
 		</div>

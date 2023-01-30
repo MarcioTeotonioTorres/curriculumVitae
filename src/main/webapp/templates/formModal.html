@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name="formModal" class="was-validated">
+		<div class="modal" tabindex="-1" id="myModal1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Seu contato:</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"
+							aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+
+						<div class="col-md-6">
+							<label for="nome" class="form-label">Nome:</label> <input
+								type="text" class="form-control" id="nome"
+								ng-model="visitante.nome" required>
+							<div class="invalid-feedback">Como gosta de ser chamado?</div>
+							<div class="valid-feedback">Verifique seu nome e clique em
+								salvar.</div>
+
+						</div>
+						<div class="col-md-6">
+							<label for="email" class="form-label">E-mail:</label> <input
+								type="email" class="form-control" id="email"
+								ng-model="visitante.email" required>
+							<div class="invalid-feedback">Digite o email para contato.</div>
+							<div class="valid-feedback">Verifique seu email e click em
+								salvar.</div>
+						</div>
+						<br>
+						<div class="col-md-4">
+							<button type="reset" class="btn btn-secondary"
+								data-bs-dismiss="modal" ng-click="limparCampos()">Close</button>
+							<button type="submit" class="btn btn-primary"
+								ng-disabled="desativarBotao" ng-click="salvar(visitante.nome,visitante.email)">Salvar</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

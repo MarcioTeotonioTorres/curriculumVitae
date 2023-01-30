@@ -8,11 +8,7 @@
 <link href="/webjars/bootstrap/5.2.0/css/bootstrap.min.css"
 	rel="stylesheet">
 <link rel="stylesheet" href="css/fundo.css">
-<link rel="stylesheet" href="css/captcha.css">
-<script src="https://kit.fontawesome.com/1667a8c5cd.js"
-	crossorigin="anonymous"></script>
 <script src="webjars/angularjs/1.8.2/angular.js"></script>
-<script src="webjars/angularjs/1.8.2/angular-route.js"></script>
 <script src="controllerJs/visitanteController.js"></script>
 
 <script>
@@ -28,17 +24,12 @@
 
 </head>
 <body ng-controller="visitantesController">
-
 	<div class="row">
-		<nav class="navbar bg-light justify-content-center">
-			<div class="container-fluid">
-				<a class="navbar-brand" href="#!/apresentacao">Curriculum Vitae</a>
-				<a class="btn btn-primary btn-md" href="#!/login">Login <i
-					class="rigth-to bracket"></i>
-				</a>
-			</div>
-		</nav>
-
+		<div class="container-fluid">
+			<nav class="navbar bg-light justify-content-center">
+				<h4 class="navbar-brand fw-bold">Curriculum Vitae</h4>
+			</nav>
+		</div>
 	</div>
 
 	<div class="row">
@@ -66,17 +57,17 @@
 							data-bs-toggle="tooltip" data-bs-placement="top"
 							title="Acesse meu Linkedin!"><img
 							src="imagens/linkedin-download-png-5a3c183bbaceb1.8925079215138878037652.jpg"
-							width="18" height="18" title="Linkedin" /></a> <a class="card-link"
+							width="18" height="18" title="Linkedin"/></a> <a class="card-link"
 							data-bs-toggle="tooltip" data-bs-placement="top"
 							title="Acesse meu GitHub!"
 							href="https://github.com/MarcioTeotonioTorres"> <img
 							src="imagens/kisspng-computer-icons-github-github-logo-save-icon-format-5ab0fad1044018.5037947915215479850174.jpg"
-							width="18" height="18" title="GitHub" />
+							width="18" height="18" title="GitHub"/>
 						</a>
 					</div>
 					<div class="card-body">
 						<button type="button" class="btn btn-secondary"
-							data-bs-toggle="modal" data-bs-target="#myModal1">Novo
+							data-bs-toggle="modal"  data-bs-target="#myModal1">Novo
 							visitante...</button>
 					</div>
 				</div>
@@ -84,20 +75,30 @@
 		</div>
 		<div id="cssTextoPrincipal" class="col">
 			
-			<!-- 			<a href="#!red">Red</a> <a href="#!green">Green</a> <a href="#!blue">Blue</a> -->
-
-			<ng-view ></ng-view>
+			<br>
+<!-- 			<div class="container"> -->
+<!-- 				<table class="table table-striped table-hover"> -->
+<!-- 					<tr> -->
+<!-- 						<th scope="col">Código</th> -->
+<!-- 						<th scope="col">Nome</th> -->
+<!-- 						<th scope="col">Email</th> -->
+<!-- 					</tr> -->
+<!-- 					<tr ng-repeat="visitantesTabela in visitantes | filter:pesquisa"> -->
+<!-- 						<td ng-click="selecionaVisitante(vistantesTabela)"> -->
+<!-- 						<td>{{visitantesTabela.codigo}}</td> -->
+<!-- 						<td>{{visitantesTabela.nome}}</td> -->
+<!-- 						<td>{{visitantesTabela.email}}</td> -->
+<!-- 					</tr> -->
+<!-- 				</table> -->
+<!-- 			</div> -->
 		</div>
 	</div>
-
 	<div class="row">
 		<div ng-include="'templates/carroussel.html'"></div>
 	</div>
 	<div class="row">
 		<div ng-include="'templates/formModal.html'"></div>
 	</div>
-
-
 	<script type="text/javascript"
 		src="/webjars/bootstrap/5.2.0/js/bootstrap.bundle.min.js"></script>
 </body>
